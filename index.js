@@ -1,65 +1,33 @@
 
-// JSON
-var Person = {
-
-    name : "Sergi",
-
-    Person.hello = function() {
-        console.log('Hola ' + this.name);
-    }
-
-}
-// Object Literal Notation: vue.js
-// --> similar al JSON però amb estructura similar a una classe
-
-var person = {
-
-    name : "Sergi",
-
-    hello: function() {
-        console.log('Hola ' + this.name);
-    },
-
-    bye: function() {
-        return 'Bye bye ' + this.name;
-    }
-}
-
-console.log(person.name);
-console.log(person.bye());
-
-// The module pattern
-// --> molt similar al OLN però declarant una funció anònima que executarem al final
-
-var person = (function() {
-
-    var name = "Sergi";
-
-    return {
-        hello: function () {
-            console.log('Hola ' + name);
-        },
-        bye: function () {
-            return 'Bye bye ' + name;
-        }
-    }
-
-}) ();
-
-var myApp = (function(context) {
-
-    var id = 0;
-
-    context.next = function () {
-        return id++;
-    };
-
-    context.next = function () {
-        return id++;
-    };
-
-}) ();
+// Javascript tradicional
 
 
-person.bye();
-//Ojo, a PHP és: person->bye();
+
+// JS -> Llenguatge ASÍNCRON orientat a interfície gràfica
+
+// SÍNCRON -> execució lineal:
+//
+// 1er -> linia 1
+// 2on -> linia 2
+// 3er -> linia 3
+//
+// ASÍNCRON -> el ordre d'execució ve definida per la interacció amb l'usuari final:
+//
+// if() {
+//     esperarEsdevenimentClick() {
+//         console.log();
+//     }
+// }
+// else {
+//
+// }
+//
+// linia2
+
+// DOM: Document Object Model
+// DOM manipulation
+
+var hello = document.getElementById("hello");
+hello.innerHTML('Hola!');
+
+hello = document.getElementById("hello").innerHTML('Hola!');
