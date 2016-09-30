@@ -1,23 +1,52 @@
+// NAMESPACES
 
-VARIABLES
-//$name = 'Sergi';
+// FRONTEND: Javascript
 
-function fire(bool) {
+// BACKEND: JAVA, PHP, JAVASCRIPT, Ruby... Python
 
-    // console.log('Hola ' + $name);
-    var foo
-
-    if (bool) {
-        var foo = 'bar';
-
-        console.log(foo)
-    } else {
-        console.log(foo)
-    }
-
+// Javascript Object Notation (JSON): la forma que té JS de declarar els objectes
+var Persons = {
+'name' : 'Sergi',
+'sn1'  : 'Tur',
+'age'  : 38
 }
 
-// console.log($name);
+// Namespaces -> declarem una variable (myApp al exemple) que farem servir
+//               de prefixe a mode de namespace tant per variables com per funcions
 
-fire(false);
+//Jquery $
+
+var myApp = {}
+
+myApp.name = 'Sergi';
+
+myApp.hello = function() {
+    console.log('Hola mon!');
+}
+
+myApp.hello()
+
+
+
+// VARIABLES
+// //$name = 'Sergi';
+//
+// function fire(bool) {
+//
+//     // console.log('Hola ' + $name);
+//     var foo
+//
+//     if (bool) {
+//         var foo = 'bar';
+//
+//         console.log(foo)
+//     } else {
+//         console.log(foo)
+//     }
+//
+// }
+//
+// // console.log($name);
+//
+// fire(false);
 
