@@ -16,15 +16,34 @@ var Persons = {
 
 //Jquery $
 
-var myApp = {}
-
-myApp.name = 'Sergi';
-
-myApp.hello = function() {
-    console.log('Hola mon!');
+class Person {
+    public $name = 'Sergi';
+    public $sn1  =  'Tur';
+    public $age  = 38;
 }
 
-myApp.hello()
+var Person = {}
+
+Person.name : 'Sergi';
+Person.sn1  : 'Tur';
+Person.age  : 38;
+
+Person.hello = function() {
+    console.log('Hola ' + Person.name);
+}
+
+
+
+
+// var myApp = {}
+//
+// myApp.name = 'Sergi';
+//
+// myApp.hello = function() {
+//     console.log('Hola mon!');
+// }
+//
+// myApp.hello()
 
 
 
