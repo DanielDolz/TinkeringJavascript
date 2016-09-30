@@ -1,23 +1,23 @@
 
+VARIABLES
+//$name = 'Sergi';
 
-hola('Dani');
+function fire(bool) {
 
-function hola($name) {
-    console.log('Hola ' + $name);
+    // console.log('Hola ' + $name);
+    var foo
+
+    if (bool) {
+        var foo = 'bar';
+
+        console.log(foo)
+    } else {
+        console.log(foo)
+    }
+
 }
 
+// console.log($name);
 
-// console.log('Hello world external index.js file');
-// // alert('Alertaaarr!');
-//
-//
-// // WINDOWS: navegadors
-// $name = "Dani";
-// window.alert(window.$name);
-//
-// console.log(window);
-// //Objecte window: objecte per defecte = Namespace Global
-//
-//
-//
-// //Scope d'una variable. Funció.
+fire(false);
+
