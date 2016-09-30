@@ -1,71 +1,65 @@
-// NAMESPACES
 
-// FRONTEND: Javascript
+// JSON
+var Person = {
 
-// BACKEND: JAVA, PHP, JAVASCRIPT, Ruby... Python
+    name : "Sergi",
 
-// Javascript Object Notation (JSON): la forma que té JS de declarar els objectes
-var Persons = {
-'name' : 'Sergi',
-'sn1'  : 'Tur',
-'age'  : 38
+    Person.hello = function() {
+        console.log('Hola ' + this.name);
+    }
+
+}
+// Object Literal Notation: vue.js
+// --> similar al JSON però amb estructura similar a una classe
+
+var person = {
+
+    name : "Sergi",
+
+    hello: function() {
+        console.log('Hola ' + this.name);
+    },
+
+    bye: function() {
+        return 'Bye bye ' + this.name;
+    }
 }
 
-// Namespaces -> declarem una variable (myApp al exemple) que farem servir
-//               de prefixe a mode de namespace tant per variables com per funcions
+console.log(person.name);
+console.log(person.bye());
 
-//Jquery $
+// The module pattern
+// --> molt similar al OLN però declarant una funció anònima que executarem al final
 
-class Person {
-    public $name = 'Sergi';
-    public $sn1  =  'Tur';
-    public $age  = 38;
-}
+var person = (function() {
 
-var Person = {}
+    var name = "Sergi";
 
-Person.name : 'Sergi';
-Person.sn1  : 'Tur';
-Person.age  : 38;
+    return {
+        hello: function () {
+            console.log('Hola ' + name);
+        },
+        bye: function () {
+            return 'Bye bye ' + name;
+        }
+    }
 
-Person.hello = function() {
-    console.log('Hola ' + Person.name);
-}
+}) ();
+
+var myApp = (function(context) {
+
+    var id = 0;
+
+    context.next = function () {
+        return id++;
+    };
+
+    context.next = function () {
+        return id++;
+    };
+
+}) ();
 
 
-
-
-// var myApp = {}
-//
-// myApp.name = 'Sergi';
-//
-// myApp.hello = function() {
-//     console.log('Hola mon!');
-// }
-//
-// myApp.hello()
-
-
-
-// VARIABLES
-// //$name = 'Sergi';
-//
-// function fire(bool) {
-//
-//     // console.log('Hola ' + $name);
-//     var foo
-//
-//     if (bool) {
-//         var foo = 'bar';
-//
-//         console.log(foo)
-//     } else {
-//         console.log(foo)
-//     }
-//
-// }
-//
-// // console.log($name);
-//
-// fire(false);
-
+person.bye();
+//Ojo, a PHP és: person->bye();
